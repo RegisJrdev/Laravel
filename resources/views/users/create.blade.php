@@ -10,7 +10,20 @@
 </head>
 <body>
 
-    <div class="flex flex-col h-screen bg-gray">
+    <div class="main-container">
+
+        <header class="header">
+            <div class="content-header">
+                <h2 class="title-logo"><a href="{{ route('dashboard') }}">Junior</a></h2>
+                <nav class="nav-links">
+                    <ul class="list-nav-link">
+                        <li><a href="#"></a>Usuarios</li>
+                        <li><a href="{{ route('dashboard') }}">Sair</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
         <form action="{{ route('user.store') }}" method="POST">
         
         @csrf {{-- Impede o lançamento de dados por aplicações externas  --}}
